@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingTop: 20,
         width: '100%',
-        height: 90
+        height: 60
     },
     headerTitle: {
-        fontSize: 18,
+        fontWeight: 'bold',
+        fontSize: 22,
         color: 'white'
     }
 })
-
 
 export default Header
