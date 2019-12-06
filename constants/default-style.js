@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 export default StyleSheet.create({
     screen: {
@@ -10,18 +10,24 @@ export default StyleSheet.create({
         marginVertical: 10,
         fontSize: 19,
         fontFamily: 'Cochin',
-        fontWeight : 'bold'
+        fontWeight: 'bold'
     },
     inputContainer: {
-        width: 300,
-        maxWidth: '80%',
+        width: '80%',
+        minWidth: 300,
+        maxWidth: '95%',
         alignItems: 'center',
     },
     buttonContainer: {
         flexDirection: 'row',
         width: '100%',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        paddingHorizontal : 15
     },
+    // button: {
+    //     // width: 100
+    //     width : Dimensions.get('window').width / 4
+    // },
     input: {
         width: 50,
         textAlign: 'center'
