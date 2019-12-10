@@ -2,33 +2,40 @@ import React from 'react'
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    Platform
 } from 'react-native'
 import Colors from '../constants/Colors'
 
 const Header = props => {
     return (
-        <View style={styles.header}>
+        <View style={{...styles.headerBase , ...Platform.select({ ios : styles.headerIOS , android : styles.headerAndroid})}}>
             <Text style={styles.headerTitle}>
                 {props.title}
-            </Text>
+            </Text> 
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    header: {
-        backgroundColor: Colors.header,
+    headerBase: {
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 20,
         width: '100%',
-        height: 60
+        height: 70
     },
     headerTitle: {
         fontWeight: 'bold',
         fontSize: 22,
         color: 'white'
+    },
+    headerIOS:{
+        backgroundColor : 'white' ,
+        borderBottomColor : '#ccc' ,
+        borderBottomWidth : 1
+    },
+    headerAndroid: {
+        backgroundColor : Colors.header , 
     }
 })
 

@@ -18,13 +18,14 @@ const GameOverScreen = props => {
                 <View style={styles.resultContainer}>
                     <Text style={styles.resultText}>Your phone needed <Text style={styles.highlight}>{roundsNumbers}</Text> rounds to </Text>
                     <Text style={styles.resultText}> guess a number <Text style={styles.highlight}>{userNumber}</Text></Text>
+                    </View>
                     {/* <Button title="NEW GAME" onPress={onRestart} color={Colors.primary} /> */}
                     <MainButton onPress={onRestart}
                         color={Colors.primary}
                     >
                         NEW GAME
                     </MainButton>
-                </View>
+                
             </View>
         </ScrollView>
     )

@@ -60,7 +60,7 @@ const StartGameScreen = props => {
     }
 
     let confirmedOutput;
-
+    
     if (confirmed) {
         confirmedOutput = (
             <Card style={DefaultStyles.summaryContainer}>
@@ -74,7 +74,7 @@ const StartGameScreen = props => {
             </Card>
         );
     }
-
+    
     return (
         <ScrollView>
             <KeyboardAvoidingView behavior='position' keyboardVerticalOffset={30}>
